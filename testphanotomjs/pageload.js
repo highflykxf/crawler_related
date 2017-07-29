@@ -1,0 +1,11 @@
+/**
+ * Created by xiangfei on 2016/12/9.
+ */
+var page = require('webpage').create();
+page.open('http://cuiqingcai.com', function (status) {
+    console.log("Status: " + status);
+    if (status === "success") {
+        page.render('example.png');
+    }
+    phantom.exit();
+});
